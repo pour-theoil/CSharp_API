@@ -19,7 +19,7 @@ namespace Gifter.Repositories
 
         public List<Post> Search(string criterion, bool sortDescending);
 
-        //public List<Post> Since(DateTime date);
+        public List<Post> Since(DateTime date);
 
     }
 }
