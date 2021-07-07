@@ -78,10 +78,12 @@ namespace Gifter.Controllers
             return Ok(_postRepository.Search(q, sortDesc));
         }
 
-        //[HttpGet("hottest")]
-        //public IActionResult Since(DateTime date)
-        //{
-        //    return Ok(_postRepository.Since(date));
-        //}
+        [HttpGet("hottest")]
+        public IActionResult Since(DateTime since)
+        {
+            return Ok(_postRepository.Since(since));
+        }
+
+        //https://localhost:5001/api/post/hottest?since=6/24/2020
     }
 }
