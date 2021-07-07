@@ -10,6 +10,9 @@ namespace Gifter.Repositories
     public class UserProfileRepository : BaseRepository, IUserProfileRepository
     {
         public UserProfileRepository(IConfiguration configuration) : base(configuration) { }
+
+        
+
         public List<UserProfile> GetAll()
         {
             using (var conn = Connection)
@@ -17,6 +20,7 @@ namespace Gifter.Repositories
                 conn.Open();
                 using (var cmd = conn.CreateCommand())
                 {
+
                     cmd.CommandText = @"
                                     Select Id, Name, Email, Bio, ImageUrl, DateCreated
                                     from UserProfile";

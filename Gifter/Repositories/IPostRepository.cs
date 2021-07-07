@@ -17,6 +17,9 @@ namespace Gifter.Repositories
 
         public Post GetPostByIdWithComments(int id);
 
+        public List<Post> Search(string criterion, bool sortDescending);
+
+        //public List<Post> Since(DateTime date);
 
     }
 }
